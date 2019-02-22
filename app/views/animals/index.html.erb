@@ -1,0 +1,13 @@
+<h1>Click an Animal To View It</h1>
+<div class="extra content">
+<%= link_to 'Back', zoos_path %> |
+<%= link_to 'Add Animal', new_zoo_animal_path(@zoo) %>
+</div>
+<ul>
+  <% @animals.each do |animal| %>
+  <div class="ui segment">
+    <%= link_to animal.name, [@zoo, animal] %>
+    </div>
+  <% end %>
+  
+</ul>
